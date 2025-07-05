@@ -1,0 +1,34 @@
+{% if hierarchy['id'] is defined %}
+    {% set hierarchyId = hierarchy['id'] %}
+    {% set title = 'Hierarchy (' ~ hierarchy['name'] ~ ')' %}
+{% else %}
+    {% set hierarchyId = '' %}
+    {% set title = 'New Hierarchy' %}
+{% endif %}
+{{adminltetags.useTag('content',
+    [
+        'component'                     : component,
+        'componentName'                 : componentName,
+        'componentId'                   : componentId,
+        'parentComponentId'             : parent,
+        'sectionId'                     : 'main',
+        'contentType'                   : 'sectionWithForm',
+        'cardHeader'                    : true,
+        'cardFooter'                    : true,
+        'cardType'                      : 'primary',
+        'cardIcon'                      : 'folder-tree',
+        'cardTitle'                     : title,
+        'cardAdditionalClass'           : 'rounded-0',
+        'cardBodyInclude'               : 'accountshierarchies/form',
+        'formButtons'                   :
+        [
+            'updateButtonId'                : hierarchyId,
+            'addActionUrl'                  : 'accounting/tools/accountshierarchies/add',
+            'addSuccessRedirectUrl'         : 'accounting/tools/accountshierarchies',
+            'updateActionUrl'               : 'accounting/tools/accountshierarchies/update',
+            'updateSuccessRedirectUrl'      : 'accounting/tools/accountshierarchies',
+            'cancelActionUrl'               : 'accounting/tools/accountshierarchies',
+            'closeActionUrl'                : 'accounting/tools/accountshierarchies'
+        ]
+    ]
+)}}
