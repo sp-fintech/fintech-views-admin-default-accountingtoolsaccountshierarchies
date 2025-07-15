@@ -5,7 +5,7 @@
 	"module_type" : "views",
 	"app_type" : "fintech",
 	"category" : "admin",
-	"version" : "0.0.0",
+	"version" : "0.1.0",
 	"repo" : "https://github.com/sp-fintech/fintech-views-admin-default-accountingtoolsaccountshierarchies",
 	"dependencies" : 
 	{
