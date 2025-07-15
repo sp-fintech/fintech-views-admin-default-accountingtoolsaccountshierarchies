@@ -15,7 +15,7 @@
                 'fieldBazScan'                              : true,
                 'fieldJstreeSearch'                         : true,
                 'fieldBazPostOnCreate'                      : false,
-                'fieldBazPostOnUpdate'                      : true,
+                'fieldBazPostOnUpdate'                      : false,
                 'fieldJstreeDataSrcArr'                     : ["accounts":["srcArr" : accountsStructure]],
                 'fieldJstreeAdd'                            : false,
                 'fieldJstreeEdit'                           : false,
@@ -109,76 +109,6 @@
                 )}}
             </div>
             <div class="col">
-                {{adminltetags.useTag('fields',
-                    [
-                        'component'                      : component,
-                        'componentName'                  : componentName,
-                        'componentId'                    : componentId,
-                        'sectionId'                      : sectionId,
-                        'fieldId'                        : 'account_type',
-                        'fieldLabel'                     : 'Account Type',
-                        'fieldType'                      : 'select2',
-                        'fieldHelp'                      : true,
-                        'fieldHelpTooltipContent'        : 'Account Type',
-                        'fieldBazScan'                   : true,
-                        'fieldBazJstreeSearch'           : false,
-                        'fieldBazPostOnCreate'           : false,
-                        'fieldBazPostOnUpdate'           : false,
-                        'fieldRequired'                  : true,
-                        'fieldDisabled'                  : true,
-                        'fieldDataSelect2Options'        : acTypes,
-                        'fieldDataSelect2OptionsKey'     : 'id',
-                        'fieldDataSelect2OptionsValue'   : 'name',
-                        'fieldDataSelect2OptionsArray'   : true,
-                        'fieldDataSelect2OptionsSelected': ''
-                    ]
-                )}}
-                {{adminltetags.useTag('fields',
-                    [
-                        'component'                      : component,
-                        'componentName'                  : componentName,
-                        'componentId'                    : componentId,
-                        'sectionId'                      : sectionId,
-                        'fieldId'                        : 'type_description',
-                        'fieldLabel'                     : false,
-                        'fieldType'                      : 'html',
-                        'fieldHelp'                      : false,
-                        'fieldHelpTooltipContent'        : '',
-                        'fieldBazJstreeSearch'           : false,
-                        'fieldBazScan'                   : false,
-                        'fieldHtmlContent'               : '<small id="type-description" class="text-info" hidden></small>'
-                    ]
-                )}}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                {{adminltetags.useTag('fields',
-                    [
-                        'component'                      : component,
-                        'componentName'                  : componentName,
-                        'componentId'                    : componentId,
-                        'sectionId'                      : sectionId,
-                        'fieldId'                        : 'account_parent',
-                        'fieldLabel'                     : 'Parent',
-                        'fieldType'                      : 'select2',
-                        'fieldHelp'                      : true,
-                        'fieldHelpTooltipContent'        : 'Account Parent',
-                        'fieldBazScan'                   : true,
-                        'fieldBazJstreeSearch'           : false,
-                        'fieldBazPostOnCreate'           : false,
-                        'fieldBazPostOnUpdate'           : false,
-                        'fieldRequired'                  : true,
-                        'fieldDisabled'                  : true,
-                        'fieldDataSelect2Options'        : [],
-                        'fieldDataSelect2OptionsKey'     : 'id',
-                        'fieldDataSelect2OptionsValue'   : 'text',
-                        'fieldDataSelect2OptionsArray'   : true,
-                        'fieldDataSelect2OptionsSelected': ''
-                    ]
-                )}}
-            </div>
-            <div class="col">
                 <div class="row">
                     <div class="col-md-10">
                         {% include '../../common/fontawesome.html' %}
@@ -229,6 +159,104 @@
                         )}}
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{adminltetags.useTag('fields',
+                    [
+                        'component'                      : component,
+                        'componentName'                  : componentName,
+                        'componentId'                    : componentId,
+                        'sectionId'                      : sectionId,
+                        'fieldId'                        : 'account_parent',
+                        'fieldLabel'                     : 'Parent',
+                        'fieldType'                      : 'select2',
+                        'fieldHelp'                      : true,
+                        'fieldHelpTooltipContent'        : 'Account Parent',
+                        'fieldBazScan'                   : true,
+                        'fieldBazJstreeSearch'           : false,
+                        'fieldBazPostOnCreate'           : false,
+                        'fieldBazPostOnUpdate'           : false,
+                        'fieldRequired'                  : true,
+                        'fieldDisabled'                  : true,
+                        'fieldDataSelect2Options'        : [],
+                        'fieldDataSelect2OptionsKey'     : 'id',
+                        'fieldDataSelect2OptionsValue'   : 'text',
+                        'fieldDataSelect2OptionsArray'   : true,
+                        'fieldDataSelect2OptionsSelected': ''
+                    ]
+                )}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{adminltetags.useTag('fields',
+                    [
+                        'component'                      : component,
+                        'componentName'                  : componentName,
+                        'componentId'                    : componentId,
+                        'sectionId'                      : sectionId,
+                        'fieldId'                        : 'account_type',
+                        'fieldLabel'                     : 'Account Type',
+                        'fieldType'                      : 'select2',
+                        'fieldHelp'                      : true,
+                        'fieldHelpTooltipContent'        : 'Account Type',
+                        'fieldBazScan'                   : true,
+                        'fieldBazJstreeSearch'           : false,
+                        'fieldBazPostOnCreate'           : false,
+                        'fieldBazPostOnUpdate'           : false,
+                        'fieldRequired'                  : true,
+                        'fieldDisabled'                  : true,
+                        'fieldDataSelect2Options'        : acTypes,
+                        'fieldDataSelect2OptionsKey'     : 'id',
+                        'fieldDataSelect2OptionsValue'   : 'name',
+                        'fieldDataSelect2OptionsArray'   : true,
+                        'fieldDataSelect2OptionsSelected': ''
+                    ]
+                )}}
+                {{adminltetags.useTag('fields',
+                    [
+                        'component'                      : component,
+                        'componentName'                  : componentName,
+                        'componentId'                    : componentId,
+                        'sectionId'                      : sectionId,
+                        'fieldId'                        : 'type_description',
+                        'fieldLabel'                     : false,
+                        'fieldType'                      : 'html',
+                        'fieldHelp'                      : false,
+                        'fieldHelpTooltipContent'        : '',
+                        'fieldBazJstreeSearch'           : false,
+                        'fieldBazScan'                   : false,
+                        'fieldHtmlContent'               : '<small id="type-description" class="text-info" hidden></small>'
+                    ]
+                )}}
+            </div>
+            <div class="col" id="banks" hidden>
+                {{adminltetags.useTag('fields',
+                    [
+                        'component'                      : component,
+                        'componentName'                  : componentName,
+                        'componentId'                    : componentId,
+                        'sectionId'                      : sectionId,
+                        'fieldId'                        : 'bank_id',
+                        'fieldLabel'                     : 'Bank',
+                        'fieldType'                      : 'select2',
+                        'fieldHelp'                      : true,
+                        'fieldHelpTooltipContent'        : 'Select Bank',
+                        'fieldBazScan'                   : true,
+                        'fieldBazJstreeSearch'           : false,
+                        'fieldBazPostOnCreate'           : false,
+                        'fieldBazPostOnUpdate'           : false,
+                        'fieldRequired'                  : true,
+                        'fieldDisabled'                  : true,
+                        'fieldDataSelect2Options'        : banks,
+                        'fieldDataSelect2OptionsKey'     : 'id',
+                        'fieldDataSelect2OptionsValue'   : 'name',
+                        'fieldDataSelect2OptionsArray'   : true,
+                        'fieldDataSelect2OptionsSelected': ''
+                    ]
+                )}}
             </div>
         </div>
         <div class="row">
@@ -340,6 +368,9 @@ dataCollectionSection =
         '{{componentId}}-{{sectionId}}-account_type'            : {
             'placeholder'   : 'SELECT ACCOUNT TYPE'
         },
+        '{{componentId}}-{{sectionId}}-bank_id'                 : {
+            'placeholder'   : 'SELECT BANK'
+        },
         '{{componentId}}-{{sectionId}}-account_parent'          : {
             'placeholder'   : 'SELECT PARENT'
         },
@@ -412,6 +443,9 @@ dataCollectionSection =
                     newStructure[structureId]['data']['uuid'] = structureArr[structure]['data']['uuid'];
                     newStructure[structureId]['data']['description'] = structureArr[structure]['data']['description'];
                     newStructure[structureId]['data']['type'] = structureArr[structure]['data']['type'];
+                    if (structureArr[structure]['data']['bank_id']) {
+                        newStructure[structureId]['data']['bank_id'] = structureArr[structure]['data']['bank_id'];
+                    }
 
                     newStructure[structureId]['seq'] = parseInt(structure);
 
@@ -510,6 +544,11 @@ dataCollectionSection =
 
                 $('#{{componentId}}-{{sectionId}}-account_description').val(data.node.data.description);
                 $('#{{componentId}}-{{sectionId}}-account_type').val(data.node.data.type).trigger('change');
+                if (data.node.data.bank_id) {
+                    $('#{{componentId}}-{{sectionId}}-bank_id').val(data.node.data.bank_id).trigger('change');
+                } else {
+                    $('#{{componentId}}-{{sectionId}}-bank_id').val(0).trigger('change');
+                }
                 $('#type-description').html(
                     '<i class="fa-solid fa-circle-info"></i> ' +
                     $($('#{{componentId}}-{{sectionId}}-account_type')
@@ -518,6 +557,13 @@ dataCollectionSection =
                 );
                 $('#type-description').attr('hidden', false);
                 $('#{{componentId}}-{{sectionId}}-account_type').attr('disabled', false);
+                if (data.node.data.type === 'bank') {
+                    $('#{{componentId}}-{{sectionId}}-bank_id').attr('disabled', false);
+                    $('#banks').attr('hidden', false);
+                } else {
+                    $('#{{componentId}}-{{sectionId}}-bank_id').attr('disabled', true);
+                    $('#banks').attr('hidden', true);
+                }
                 $('#{{componentId}}-{{sectionId}}-account_name').attr('disabled', false);
                 $('#{{componentId}}-{{sectionId}}-account_icon').attr('disabled', false);
                 $('#{{componentId}}-{{sectionId}}-account_description').attr('disabled', false);
@@ -546,6 +592,12 @@ dataCollectionSection =
             $('#{{componentId}}-{{sectionId}}-account_type').on('select2:select', function(e) {
                 $('#type-description').html('<i class="fa-solid fa-circle-info"></i> ' + $(e.params.data.element).data('description'));
                 $('#type-description').attr('hidden', false);
+
+                if (e.params.data.id === 'bank') {
+                    $('#banks').attr('hidden', false);
+                } else {
+                    $('#banks').attr('hidden', true);
+                }
             });
 
             $('#{{componentId}}-{{sectionId}}-add-account-item').click(function(e) {
@@ -555,6 +607,7 @@ dataCollectionSection =
                 $('#{{componentId}}-{{sectionId}}-account_name').attr('disabled', false);
                 $('#{{componentId}}-{{sectionId}}-account_parent').attr('disabled', false);
                 $('#{{componentId}}-{{sectionId}}-account_type').attr('disabled', false);
+                $('#{{componentId}}-{{sectionId}}-bank_id').attr('disabled', false);
                 $('#{{componentId}}-{{sectionId}}-account_icon').attr('disabled', false);
                 $('#{{componentId}}-{{sectionId}}-account_icon').val('circle').trigger('change');
                 $('#{{componentId}}-{{sectionId}}-account_description').attr('disabled', false);
@@ -619,6 +672,9 @@ dataCollectionSection =
                 $('#{{componentId}}-{{sectionId}}-account_parent').empty().trigger('change');
                 $('#{{componentId}}-{{sectionId}}-account_type').attr('disabled', true);
                 $('#{{componentId}}-{{sectionId}}-account_type').val('').trigger('change');
+                $('#{{componentId}}-{{sectionId}}-bank_id').attr('disabled', true);
+                $('#{{componentId}}-{{sectionId}}-bank_id').val('').trigger('change');
+                $('#banks').attr('hidden', true);
                 $('#type-description').html('');
                 $('#type-description').attr('hidden', true);
                 $('#{{componentId}}-{{sectionId}}-account_icon').attr('disabled', true);
@@ -651,13 +707,16 @@ dataCollectionSection =
                             $(this).removeClass('is-invalid');
                         });
                     } else {
-                        var nodeId, nodeData, name, isPlaceholder, accountType, parentId, parent, icon, iconId, iconType, isBrand, description;
+                        var nodeId, nodeData, name, isPlaceholder, accountType, bankId, parentId, parent, icon, iconId, iconType, isBrand, description;
 
                         nodeId = $('#{{componentId}}-{{sectionId}}-account_id').val();
                         parentId = $('#{{componentId}}-{{sectionId}}-account_parent').select2('data')[0].id;
                         parent = $('#{{componentId}}-{{sectionId}}-accounts_structure').jstree().get_node(parentId);
                         name = $('#{{componentId}}-{{sectionId}}-account_name').val();
                         accountType = $('#{{componentId}}-{{sectionId}}-account_type').select2('data')[0].id;
+                        if (accountType === 'bank') {
+                            bankId = $('#{{componentId}}-{{sectionId}}-bank_id').select2('data')[0].id;
+                        }
                         icon = $('#{{componentId}}-{{sectionId}}-account_icon').select2('data');
                         iconId = $('#{{componentId}}-{{sectionId}}-account_icon').select2('data')[0].id;
                         iconType = $(icon[0].element).data('type');
@@ -695,6 +754,9 @@ dataCollectionSection =
 
                             nodeData['data']['description'] = description;
                             nodeData['data']['type'] = accountType;
+                            if (bankId) {
+                                nodeData['data']['bank_id'] = bankId;
+                            }
 
                             if (nodeData['parent'] !== parentId) {
                                 moveNode(nodeId, parentId, nodeData);
@@ -725,6 +787,9 @@ dataCollectionSection =
                                 var data = { };
                                 data['description'] = description;
                                 data['type'] = accountType;
+                                if (bankId) {
+                                    data['bank_id'] = bankId;
+                                }
                                 data['uuid'] = $('#{{componentId}}-{{sectionId}}-account_id').val();
 
                                 $('#{{componentId}}-{{sectionId}}-accounts_structure').jstree('create_node',
